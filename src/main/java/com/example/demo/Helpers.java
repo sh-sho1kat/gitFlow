@@ -8,6 +8,9 @@ public class Helpers {
         return "Hello World!";
     }
 
+    public String FormatProduct(String product) {
+        return product;
+    }
     public String FormatDate(Date date){
         return date.toString();
     }
