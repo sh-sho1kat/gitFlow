@@ -1,10 +1,7 @@
 package com.example.demo.controller;
 
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class PostController {
@@ -16,5 +13,9 @@ public class PostController {
     @GetMapping("getpost")
     public String getpost(@RequestBody String post) {
         return post;
+    }
+    @PutMapping("edit/{id}")
+    public String edit(@PathVariable String id, @RequestBody String post) {
+        return "post";
     }
 }
